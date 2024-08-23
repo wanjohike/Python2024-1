@@ -8,3 +8,5 @@
 student_id = {123, 11, 101, 456, 345}
 print(type(student_id))
 print(student_id)
+
+# Read more about a normal set and a frozen set. And Give examples
