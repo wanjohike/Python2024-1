@@ -17,10 +17,10 @@ password = input('Enter password😂: ')
 
 # validate the username is not empty
 if username == "":
-    print("Username cannot be empty")
+        print("Username cannot be empty")
 elif "@" not in email:
         print('Invalid email!')
 elif len(password) < 8:
         print('Password must contain more than 8 characters')
 else:
-    print('Registration Successful🤦‍♀️')
+        print('Registration Successful🤦‍♀️')
