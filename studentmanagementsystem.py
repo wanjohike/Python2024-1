@@ -49,7 +49,7 @@ def displayStudent():
         print(' ')
         print(f"Student Name: {student['name']}, Age: {student['age']}, Grade:{student['grade']}")
 
-# function to display a menu for the user to choose what the need
+# function to display a menu for the user to choose what they need
 def main():
     while True:
         print('Welcome to Murima School Management System')
