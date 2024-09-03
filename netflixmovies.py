@@ -7,8 +7,13 @@ movies = [
 
 ]
 
+# list comprehension filter for movies based on genre 'Crime'
 crime = [movie for movie in movies if movie['genre'] == 'Crime']
-highly_rated = [movie for movie in movies if movie['rating'] >= 9.0]
 print('Crime Movies')
 for movie in crime:
     print(f"{movie['title']}: {movie['genre']}")
+
+# list comprehension filter for movies based on rating threshold lower than 9.0
+rating = [movie for movie in movies if movie['rating'] < 9.0]
+for movie in rating:
+    print(f"{movie['title']}: {movie['rating']}")
