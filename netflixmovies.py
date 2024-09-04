@@ -1,3 +1,4 @@
+from collections import Counter
 movies = [
     {"title": "The Shawshank Redemption", "genre": "Drama", "rating": 9.3},
     {"title": "The Godfather", "genre": "Crime", "rating": 9.2},
@@ -17,3 +18,17 @@ for movie in crime:
 rating = [movie for movie in movies if movie['rating'] < 9.0]
 for movie in rating:
     print(f"{movie['title']}: {movie['rating']}")
+
+sorted_movies = sorted(movies, key=lambda movie: movie['rating'])
+print("Movies sored by their rating in desc order")
+for movie in sorted_movies:
+    print(f"{movie['title']}: {movie['rating']}")
+
+genre_count = [movie['genre'] for movie in movies]
+genres = {genre:genre_count.count(genre) for genre in genre_count}
+
+# anther way to get the count of genre
+movie_genre = {genre: sum(1 for movie in movies if movie['genre'] == genre) for genre in set(movie['genre'] for movie in movies)}
+
+
+genresCounts = Counter(movie["genre"] for movie in movies)
