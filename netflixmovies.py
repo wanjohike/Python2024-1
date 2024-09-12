@@ -10,6 +10,7 @@ movies = [
 
 # list comprehension filter for movies based on genre 'Crime'
 crime = [movie for movie in movies if movie['genre'] == 'Crime']
+drama = [movie for movie in movies if movie['genre'] == 'Drama']
 print('Crime Movies')
 for movie in crime:
     print(f"{movie['title']}: {movie['genre']}")
@@ -32,3 +33,21 @@ movie_genre = {genre: sum(1 for movie in movies if movie['genre'] == genre) for 
 
 
 genresCounts = Counter(movie["genre"] for movie in movies)
+
+# saving to a text file named output
+with open('nextfix.txt', 'w') as file:
+    file.write('Drama Movies\n')
+    for movie in drama:
+        file.write(f"{movie['title']}: {movie['genre']}\n")
+    
+    file.write('\nHighly Rated\n')
+    for movie in rating:
+        file.write(f"{movie['title']}: {movie['genre']}\n")
+    
+    file.write("Movies sored by their rating in desc order")
+    for movie in sorted_movies:
+        file.write(f"{movie['title']}: {movie['rating']}")
+
+    
+
+    

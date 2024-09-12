@@ -1,3 +1,0 @@
-Erick,32,101,Headache,True
-Nancy Wambui Maina,12,102,Chest Pain,True
-Josephine Mumbi Gitura,29,103,Fatigue,True
